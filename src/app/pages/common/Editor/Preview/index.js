@@ -13,7 +13,7 @@ export default function({ title, author, coverUrl, tags, createTime, mdContent, 
     <Container>
       <Header
         title={title}
-        bgUrl={coverUrl}
+        bgUrl={coverUrl || 'http://snp-assets.oss-cn-shanghai.aliyuncs.com/blog_covers/cover_javascript1.jpeg'}
         onEditClicked={onEditClicked}
         praiseCount={0}
         author={author}

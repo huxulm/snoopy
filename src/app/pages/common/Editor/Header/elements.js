@@ -5,6 +5,9 @@ export const DetailHeaderContainer = styled.div`
   width: 100%;
   /* background: #297AFF; */
   background: ${props => props.bgUrl? `url("${props.bgUrl}")` : "#B7B5B9"};
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
   display: flex;
   align-items: center;
   position: relative;

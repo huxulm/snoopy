@@ -113,7 +113,7 @@ class Editor extends React.Component {
       modifyTime,
       author,
       tags,
-      coverUrl = ""
+      cover = ""
     } = isPreview ? originSource : mode == 2 ? currentEditing : currentCreating;
     return (
       <EditorContainer isFull={this.state.isFull}>
@@ -132,7 +132,7 @@ class Editor extends React.Component {
               author={author}
               tags={tags}
               createTime={createTime}
-              coverUrl={""}
+              coverUrl={cover}
               onEditClicked={() => {
                 this.props.signals.editor.onEidtButtonClicked();
               }}

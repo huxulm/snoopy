@@ -45,8 +45,17 @@ class Blog extends React.Component {
     this.props.signals.loadPortalPage();
   }
 
+  getSwitchStyle = ({ pathname }) => {
+
+    if (pathname !== '/blog') {
+      return { boxShadow: 'none' };
+    }
+    return null;
+  }
+
   render() {
     const { location } = this.props;
+    let switchStyle = this.getSwitchStyle(location);
     return (
       <Container className="bl" innerRef={e => (this.conRef = e)}>
         {!/blog\/[0-9A-Za-z]{24}$/.test(location.pathname) && (
@@ -59,7 +68,7 @@ class Blog extends React.Component {
         )}
         <ContentContainer>
           <Switch>
-            <SwitchContentContainer>
+            <SwitchContentContainer style={switchStyle}>
               <Route exact path="/blog" render={( { location } ) => {
                 if (location.search) {
                   let query = qs.parse(location.search);

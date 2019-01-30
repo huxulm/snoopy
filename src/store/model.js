@@ -24,6 +24,7 @@ export const Blog = types.model({
   pictures: types.maybeNull(types.array(types.string)),
   tags: types.array(types.maybeNull(Tag)),
   title: types.maybeNull(types.string),
+  cover: types.maybeNull(types.string),
 });
 
 export default {
