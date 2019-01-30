@@ -248,9 +248,9 @@ class CodeBlock extends React.PureComponent {
   }
 
   render() {
-    const { hideTitle = false } = this.props;
+    const { hideTitle = false, style = {} } = this.props;
     return (
-      <div className="code-wrapper">
+      <div className="code-wrapper" style={style}>
         {!hideTitle && (
           <div className="title-bar">
             <Lang>
