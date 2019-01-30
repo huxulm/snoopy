@@ -1,0 +1,5 @@
+{
+  "autoimport.doubleQuotes": true,
+  "autoimport.filesToScan": "**/*.{ts,tsx,js,jsx}",
+  "html.format.enable": false,
+}

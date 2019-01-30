@@ -1,0 +1,55 @@
+.md-view {
+  padding: 1rem;
+  box-sizing: content-box;
+  color: #313134;
+  font-family: Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+
+  h2 {
+    line-height: 1.3em;
+    margin: 1.3em 0;
+    font-size: 1.5em;
+  }
+
+  p {
+    line-height: 1.6em;
+    margin: 1.6em 0;
+    font-size: 1.2rem;
+  }
+
+  a {
+    color: #2A8DFF;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  ul {
+    list-style-type: square;
+    font-size: inherit;
+  }
+
+  blockquote {
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    border-left: 3px solid lightgray;
+  }
+
+  blockquote p {
+    padding-left: .5rem;
+  }
+
+  img {
+    margin: 0 auto;
+    max-width: 80%;
+    height: auto;
+    display: flex;
+  }
+  @media (max-width: 468px) {
+    img {
+      width: auto;
+      max-width: 100%;
+    }
+  }
+}
