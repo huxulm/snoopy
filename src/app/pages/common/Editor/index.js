@@ -95,7 +95,7 @@ class Editor extends React.Component {
   }
 
   render() {
-    const { mode = 1, screenWidth, tags } = this.props;
+    const { mode = 1, screenWidth } = this.props;
     const {
       isPreview,
       isLoading,
@@ -112,6 +112,7 @@ class Editor extends React.Component {
       createTime,
       modifyTime,
       author,
+      tags,
       coverUrl = ""
     } = isPreview ? originSource : mode == 2 ? currentEditing : currentCreating;
     return (
@@ -129,6 +130,7 @@ class Editor extends React.Component {
               title={title}
               mdContent={mdContent}
               author={author}
+              tags={tags}
               createTime={createTime}
               coverUrl={""}
               onEditClicked={() => {
@@ -147,7 +149,7 @@ class Editor extends React.Component {
                 onCreateTimeChanged={this.onCreateTimeChanged}
                 onTitleChanged={this.onTitleChanged}
                 onModifyTimeChanged={this.onModifyTimeChanged}
-                tags={tags} 
+                tags={tags}
                 onTagsSelected={this.onTagsSelected}
               />
               <SplitPane

@@ -14,8 +14,7 @@ const Tag = types.model({
 });
 
 export const Blog = types.model({
-  author: types.maybeNull(types.string),
-  authorId: types.maybeNull(types.string),
+  author: types.maybeNull(User),
   createTime: types.maybeNull(types.string),
   htmlContent: types.maybeNull(types.string),
   id: types.maybeNull(types.string),
@@ -23,7 +22,7 @@ export const Blog = types.model({
   mdContent: types.maybeNull(types.string),
   modifyTime: types.maybeNull(types.string),
   pictures: types.maybeNull(types.array(types.string)),
-  tags: types.maybeNull(types.array(Tag)),
+  tags: types.array(types.maybeNull(Tag)),
   title: types.maybeNull(types.string),
 });
 

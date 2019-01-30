@@ -8,7 +8,7 @@ import moment from "moment";
 import Footer from "../../../Footer";
 import { Container } from "./elements";
 
-export default function({ title, author, coverUrl, createTime, mdContent, onEditClicked }) {
+export default function({ title, author, coverUrl, tags, createTime, mdContent, onEditClicked }) {
   return (
     <Container>
       <Header
@@ -17,6 +17,7 @@ export default function({ title, author, coverUrl, createTime, mdContent, onEdit
         onEditClicked={onEditClicked}
         praiseCount={0}
         author={author}
+        tags={tags}
         createTime={createTime? moment(createTime).format('MM/DD YYYY') : null}
       />
       <Markdown

@@ -19,7 +19,7 @@ class BlogList extends React.Component {
     queryBlogList();
   }
 
-  onItemClick = (id, e) => {
+  onItemClick = (id, tags, e) => {
     history.push(`/blog/${id}`);
     const { signals } = this.props;
     signals.editor.loadSource({ id });
@@ -35,6 +35,7 @@ class BlogList extends React.Component {
             summary={v.mdContent}
             createTime={moment(v.createTime).format("MM/DD YYYY")}
             id={v.id}
+            author={v.author}
             title={v.title}
             onItemClick={this.onItemClick}
           >

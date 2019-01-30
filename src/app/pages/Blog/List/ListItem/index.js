@@ -4,17 +4,17 @@ import noop from "lodash/noop";
 
 const ListItem = ({
   id,
-  authorId,
+  tags,
   title,
   summary,
   bgImg,
-  author = "Jackdon",
+  author = { name: '', id: '' },
   createTime = "2018-08-22",
   onItemClick = noop,
   onAuthorClick = noop,
 }) => {
   return (
-    <Container className="list-item" onClick={onItemClick.bind(this, id)}>
+    <Container className="list-item" onClick={onItemClick.bind(this, id, tags)}>
       <Title>
         {title}
       </Title>
@@ -22,8 +22,8 @@ const ListItem = ({
         {summary}
       </Summary>
       <Status>
-        {`Posted by `}<a onClick={onAuthorClick.bind(this, authorId)}>{author}</a>
-        {` at ${createTime}`}
+        {`POSTED BY `}<a onClick={onAuthorClick.bind(this, author.id)} style={{ fontWeight: 600 }} >{author.name}</a>
+        {` AT ${createTime}`}
       </Status>
     </Container>
   );
