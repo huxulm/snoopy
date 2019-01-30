@@ -179,7 +179,7 @@ class Formatter extends React.Component {
           >
             {this.state.code}
           </FormatterArea>
-          <CodeBlock language={this.state.lang} value={formattedCode} hideTitle={true} />
+          <CodeBlock style={{ border: 'none' }} language={this.state.lang} value={formattedCode} hideTitle={true} />
         </SplitPane>
       </Container>
     );

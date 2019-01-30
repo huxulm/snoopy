@@ -36,14 +36,14 @@ injectGlobal`
   .Resizer.vertical {
     width: 5px;
     margin: 0 -5px;
-    border-left: 5px solid rgba(0, 0, 0, 0.5);
-    border-right: 5px solid rgba(0, 0, 0, 0.5);
+    border-left: 5px solid rgba(153, 153, 153, 1);
+    border-right: 5px solid rgba(153, 153, 153, 1);
     cursor: col-resize;
   }
 
   .Resizer.vertical:hover {
-    border-left: 5px solid rgba(0, 0, 0, 0.5);
-    border-right: 5px solid rgba(0, 0, 0, 0.5);
+    border-left: 5px solid rgba(153, 153, 153, 1);
+    border-right: 5px solid rgba(153, 153, 153, 1);
   }
   .Resizer.disabled {
     cursor: not-allowed;
