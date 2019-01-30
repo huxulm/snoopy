@@ -60,9 +60,8 @@ export function setCurrentEditingMdContent( { state, props } ) {
 
 export function saveCurrent({ api, state, path }) {
   return api.post(`/blogs/modify`, state.get('editor.currentEditing')).then(res => {
-    console.log(`更新:${res}`);
-    if (res) {
-      return path.success({ id: res });
+    if (res && res.data) {
+      return path.success({ id: res.data });
     } else {
       return path.error({ msg: '失败' });
     }
@@ -71,9 +70,8 @@ export function saveCurrent({ api, state, path }) {
 
 export function saveCreating({ api, state, path }) {
   return api.post(`/blogs/add`, state.get('editor.currentCreating')).then(res => {
-    console.log(`新增:${res}`);
-    if (res) {
-      return path.success({ id: res });
+    if (res && res.data) {
+      return path.success({ id: res.data });
     } else {
       return path.error({ msg: '失败' });
     }
@@ -82,8 +80,8 @@ export function saveCreating({ api, state, path }) {
 
 export function getTags({ api, state, path }) {
   return api.get(`/blogs/tags`).then(res => {
-    if (res) {
-      return path.success({ tags: res });
+    if (res && res.data) {
+      return path.success({ tags: res.data });
     } else {
       return path.error({ msg: '失败' });
     }

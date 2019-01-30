@@ -1,4 +1,18 @@
 import { types } from 'mobx-state-tree';
+
+const User = types.model({
+  avatarUrl: types.maybeNull(types.string),
+  email: types.maybeNull(types.string),
+  id: types.maybeNull(types.string),
+  name: types.maybeNull(types.string),
+  username: types.maybeNull(types.string)
+});
+
+const Tag = types.model({
+  id: types.maybeNull(types.string),
+  name: types.maybeNull(types.string),
+});
+
 export const Blog = types.model({
   author: types.maybeNull(types.string),
   authorId: types.maybeNull(types.string),
@@ -9,7 +23,7 @@ export const Blog = types.model({
   mdContent: types.maybeNull(types.string),
   modifyTime: types.maybeNull(types.string),
   pictures: types.maybeNull(types.array(types.string)),
-  tags: types.maybeNull(types.array(types.string)),
+  tags: types.maybeNull(types.array(Tag)),
   title: types.maybeNull(types.string),
 });
 
@@ -19,13 +33,7 @@ export default {
   isAuthenticating: types.boolean,
   authToken: types.maybeNull(types.string),
   user: types.maybeNull(
-    types.model({
-      avatarUrl: types.maybeNull(types.string),
-      email: types.maybeNull(types.string),
-      id: types.maybeNull(types.string),
-      name: types.maybeNull(types.string),
-      username: types.maybeNull(types.string)
-    })
+    User
   ),
   currentModal: types.maybeNull(types.string),
   blogList: types.maybeNull(

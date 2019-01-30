@@ -40,9 +40,9 @@ export function removeJwtFromStorage( { jwt, state } ) {
 export function getUser({ api, path }) {
   return api
     .get(`/users/me`)
-    .then(data => {
-      if (data) {
-        const { _id, name, avatar, email } = data;
+    .then(res => {
+      if (res && res.data) {
+        const { _id, name, avatar, email } = res.data;
         return path.success({
           user: { avatarUrl: avatar, id: _id, name, email }
         });
@@ -58,8 +58,8 @@ export function setModal( { state, props } ) {
 }
 
 export function queryBlogByPager( { state, props, api }) {
-  return api.get(`/blogs/page`).then(data => {
-    state.set('blogList', data);
+  return api.get(`/blogs/page?page=${props.page || 1}&limit=${props.limit || 5}`).then(res => {
+    state.set('blogList', res.data);
   }).catch(err => {
     console.log(err);
     state.set('blogList', null);
@@ -69,10 +69,10 @@ export function queryBlogByPager( { state, props, api }) {
 export function queryBlogById({ state, props, api, path }) {
   return api
     .get(`/blogs/q?id=${props.id}`)
-    .then(data => {
-      state.set("blogDetail", data);
-      if (data) {
-        return path.success({ data });
+    .then(res => {
+      state.set("blogDetail", res.data);
+      if (res && res.data) {
+        return path.success({ data: res.data });
       } else {
         return path.error();
       }

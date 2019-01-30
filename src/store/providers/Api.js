@@ -18,18 +18,7 @@ function handleResponse(response, { shouldCamelize = true } = {}) {
   const camelizedData = shouldCamelize
     ? camelizeKeys(response.result)
     : response.result;
-
-  // Quickfix to prevent underscored dependencies from being camelized.
-  // Never store data as keys in the future.
-  if (
-    camelizedData &&
-    camelizedData.data &&
-    camelizedData.data.npmDependencies
-  ) {
-    camelizedData.data.npmDependencies = response.result.data.npm_dependencies;
-  }
-
-  return camelizedData.data ? camelizedData.data : camelizedData;
+  return camelizedData;
 }
 
 const getMessage = (error) => {
