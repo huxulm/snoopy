@@ -11,8 +11,21 @@ export function addNotification(
   buttons = []
 ) {
   // eslint-disable-next-line no-shadow
-  return function addNotification({ state, resolve }) {}
-}  
+  return function addNotification({ state, resolve }) {
+    const now = Date.now();
+    const notificationTypeValue = resolve.value(notificationType);
+    const timeAliveDefault = notificationTypeValue === 'error' ? 6 : 3;
+
+    state.push('notifications', {
+      id: now,
+      title: resolve.value(title),
+      notificationType: notificationTypeValue,
+      buttons: resolve.value(buttons),
+      endTime:
+        now + (timeAlive ? resolve.value(timeAlive) : timeAliveDefault) * 1000,
+    });
+  };
+}
 
 export function withLoadApp(continueSequence) {
   return sequence(

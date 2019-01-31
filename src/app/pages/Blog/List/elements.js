@@ -58,4 +58,9 @@ export const BtnLoader = styled.div`
   :hover {
     background: #DFDEDE;
   }
+
+  @media (max-width: 467px) {
+    height: auto;
+    line-height: normal;
+  }
 `;

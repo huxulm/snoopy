@@ -84,7 +84,7 @@ class Controller extends React.Component {
       mode
     } = this.props;
     return (
-      <Container innerRef={e => (this.conRef = e)}>
+      <Container ref={e => (this.conRef = e)}>
         <CtrlGroupWrapper>
           {withWrapper(FaHeader)}
           {withWrapper(FaItalic)}

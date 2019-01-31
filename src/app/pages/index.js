@@ -5,6 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import Loadable from "../utils/Loadable";
 import Modals from "./common/Modals";
 import SlideImage from "app/components/SlideImage";
+import Notifications from 'app/pages/common/Notifications';
 // import _ToolsPage from /* webpackChunkName: 'page-tools' */ "../pages/common/Tools"
 import "normalize.css";
 
@@ -54,6 +55,7 @@ class Routes extends Component {
   render() {
     return (
       <Container>
+        <Notifications />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/home" component={Portal} />

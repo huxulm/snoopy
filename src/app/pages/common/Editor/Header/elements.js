@@ -70,6 +70,7 @@ export const BottomContainer = styled.div`
   }
 `;
 
-export const BottomTagsContainer = BottomContainer.extend`
+export const BottomTagsContainer = styled(BottomContainer)`
+  padding-right: 2rem;
   bottom: 0;
 `;

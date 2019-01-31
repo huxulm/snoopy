@@ -1,6 +1,7 @@
 .blog-header {
   opacity: 0;
   color: #2C2C2C;
+  // position: fixed;
   transform: translateY(-3.5rem);
   &.onscroll {
     opacity: .9;

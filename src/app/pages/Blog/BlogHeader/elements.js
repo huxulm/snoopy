@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import Row from "common/components/flex/Row";
 
-export const Container = Row.extend`
+export const Container = styled(Row)`
   width: 100%;
   height: 3.5rem;
-  background: ${props => `rgba(244, 244, 244, ${props.opacity || 1})`};
+  background: ${props => props.theme.white.lighten(1)};
   z-index: 10;
   vertical-align: middle;
   position: sticky;

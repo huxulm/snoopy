@@ -59,7 +59,7 @@ class Blog extends React.Component {
     let switchStyle = this.getSwitchStyle(location);
     let isScrolling = scrollTop > 50;
     return (
-      <Container className="bl" innerRef={e => (this.conRef = e)}>
+      <Container className="bl" ref={e => (this.conRef = e)}>
         <BlogHeader
           onClickBack={e => {
             history.push("/blog");

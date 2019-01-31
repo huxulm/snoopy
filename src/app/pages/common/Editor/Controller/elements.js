@@ -3,7 +3,7 @@ import Centered from "common/components/flex/Center";
 import Row from "common/components/flex/Row";
 import Button from "app/components/Button";
 
-export const Container = Row.extend`
+export const Container = styled(Row)`
   position: sticky;
   top: 0;
   z-index: 10;
@@ -15,7 +15,7 @@ export const Container = Row.extend`
   padding: 1rem;
 `;
 
-export const CtrlGroupWrapper = Centered.extend`
+export const CtrlGroupWrapper = styled(Centered)`
   height: 2.5rem;
   width: auto;
   flex-direction: row;
@@ -24,7 +24,7 @@ export const CtrlGroupWrapper = Centered.extend`
   border-bottom: ${props => `1px solid lightgray`};
 `;
 
-export const CtrlItemWrapper = Centered.extend`
+export const CtrlItemWrapper = styled(Centered)`
   height: 100%;
   width: 2.5rem;
   background: ${props => props.theme.primary.lighten(.5)};
@@ -35,7 +35,7 @@ export const CtrlItemWrapper = Centered.extend`
   }
 `;
 
-export const StyledButton = Button.extend`
+export const StyledButton = styled(Button)`
   color: ${props => props.theme.black.greyscale(0)};
   :hover {
     background: ${props => props.theme.primary.greyscale(.5)};

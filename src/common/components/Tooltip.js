@@ -1,10 +1,10 @@
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import 'react-tippy/dist/tippy.css';
 import { Tooltip, withTooltip } from 'react-tippy';
 // import theme from 'common/theme';
 
 // eslint-disable-next-line
-injectGlobal`
+createGlobalStyle`
   .tippy-popper {
     position: absolute;
   }

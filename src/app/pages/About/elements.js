@@ -50,7 +50,7 @@ export const ProflieInfo = styled.div`
   }
 `;
 
-export const BaseInfo = Row.extend`
+export const BaseInfo = styled(Row)`
   align-items: flex-start;
   padding: 5%;
   @media (max-width: 468px) { 

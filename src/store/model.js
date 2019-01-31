@@ -47,4 +47,13 @@ export default {
   ),
   blogDetail: types.maybeNull(Blog),
   scrollTop: types.maybeNull(types.number),
+  notifications: types.array(
+    types.model({
+      buttons: types.array(types.string),
+      endTime: types.number,
+      id: types.number,
+      notificationType: types.string,
+      title: types.string,
+    })
+  ),
 };

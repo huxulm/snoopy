@@ -3,15 +3,13 @@ import Modal from 'react-modal';
 
 import {
   CLOSE_TIMEOUT_MS,
-  applyGlobalStyles,
+  GlobalModalStyles,
   BaseModal,
   ModalTitle,
   ModalBody,
 } from './elements';
 
 Modal.setAppElement('#root');
-
-applyGlobalStyles();
 
 class ModalComponent extends React.Component {
   getStyles = (width = 400, top = 20) => ({
@@ -46,7 +44,8 @@ class ModalComponent extends React.Component {
         contentLabel={title || 'Modal'}
         style={this.getStyles(width, top)}
         closeTimeoutMS={CLOSE_TIMEOUT_MS}
-      >
+      > 
+        <GlobalModalStyles />
         {isOpen ? (
           <BaseModal>
             {title && <ModalTitle>{title}</ModalTitle>}

@@ -1,7 +1,7 @@
-import styled, { injectGlobal } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 // eslint-disable-next-line
-injectGlobal`
+export const GlobalSplitPaneStyles = createGlobalStyle`
   .Resizer {
     background: none;
     opacity: 1;

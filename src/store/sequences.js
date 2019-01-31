@@ -60,3 +60,10 @@ export const onScrollChange = [
   // set(state`scrollTop`, props.scrollTop),
   set(state`scrollTop`, props`scrollTop`),
 ]
+
+export const removeNotification = actions.removeNotification;
+
+export const addNotification = factories.addNotification(
+  props`message`,
+  props`type`
+);

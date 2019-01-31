@@ -104,6 +104,7 @@ class Editor extends React.Component {
   }
 
   onEditorScroll = (e) => {
+    console.log(`page is scrolling...`);
     const { onScrollChange } = this.props.signals;
     if (onScrollChange) {
       onScrollChange({ scrollTop: e.target.scrollTop });
@@ -144,7 +145,7 @@ class Editor extends React.Component {
       cover = ""
     } = isPreview ? originSource : mode == 2 ? currentEditing : currentCreating;
     return (
-      <EditorContainer isFull={this.state.isFull} innerRef={e => {this.editorRef = e;}}>
+      <EditorContainer isFull={this.state.isFull} ref={e => {this.editorRef = e;}}>
         <Fullscreen
           enabled={false}
           onChange={isFull =>

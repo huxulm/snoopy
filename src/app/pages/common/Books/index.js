@@ -1,18 +1,10 @@
 import React from "react";
-import { Container, ToolsContainer, ToolsItem, GlobalSplitPaneStyles } from "./elements";
+import { Container, ToolsContainer, ToolsItem } from "./elements";
 import { Switch, Route } from "react-router-dom";
-import SqlFormatter from "./Formatter/SqlFormatter";
-// import CommonFormatter from "./Formatter/Common";
-import history from "../../../utils/history";
+import history from "app/utils/history";
 import { withRouter } from 'react-router-dom';
 import Loadable from "app/utils/Loadable";
 import Title from "app/components/Title";
-import { grey } from "@material-ui/core/colors";
-
-const ToolsCommon = Loadable(() =>
-  import(/* webpackChunkName: 'page-tools-common' */ "./Formatter/Common")
-);
-
 
 class FormatterIndex extends React.Component {
   constructor(props) {
@@ -30,7 +22,6 @@ class FormatterIndex extends React.Component {
   render() {
     return (
       <Container>
-        <GlobalSplitPaneStyles />
         <div style={{ borderBottom: "1px solid #d5d5d5" }}>
           <Title
             color="#0fd59d"
@@ -56,8 +47,6 @@ class FormatterIndex extends React.Component {
               </ToolsContainer>
             )}
           />
-          <Route exact path="/tools/sql" component={SqlFormatter} />
-          <Route exact path="/tools/common" component={ToolsCommon} />
         </Switch>
       </Container>
     );

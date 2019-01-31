@@ -37,6 +37,15 @@ export function removeJwtFromStorage( { jwt, state } ) {
   state.set('jwt', null);
 }
 
+export function removeNotification({ state, props }) {
+  const notifications = state.get('notifications');
+  const notificationToRemoveIndex = notifications.findIndex(
+    notification => notification.id === props.id
+  );
+
+  state.splice('notifications', notificationToRemoveIndex, 1);
+}
+
 export function getUser({ api, path }) {
   return api
     .get(`/users/me`)

@@ -20,6 +20,7 @@ export default Module({
     blogList: null,
     blogDetail: null,
     scrollTop: 0,
+    notifications: [],
   },
   getters: {
   },
@@ -34,6 +35,8 @@ export default Module({
     queryBlogList: sequences.queryBlogListByPager,
     queryBlogDetail: sequences.queryBlogDetailById,
     onScrollChange: sequences.onScrollChange,
+    notificationAdded: sequences.addNotification,
+    notificationRemoved: sequences.removeNotification,
   },
   catch: [],
   modules: {

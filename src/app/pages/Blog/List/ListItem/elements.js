@@ -25,7 +25,7 @@ export const Title = styled.div`
   }
 `;
 
-export const Summary = Title.extend`
+export const Summary = styled(Title)`
   height: 3rem;
   font-size: 1.2rem;
   font-weight: normal;
