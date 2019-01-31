@@ -34,7 +34,7 @@ export const NavItem = styled.li`
   width: 100%;
   height: 3rem;
   text-align: center;
-  color: ${props => props.theme.black.darken(.9)};
+  color: ${props => props.theme.black.lighten(.1)};
   align-content: center;
   line-height: 3rem;
   text-align: center;
@@ -45,7 +45,7 @@ export const NavItem = styled.li`
   cursor: pointer;
   border-left: 5px solid transparent;
   transition: all .2s ease-in-out;
-  font-weight: 600;
+  font-weight: 400;
 
   &:hover {
     background: rgba(219, 228, 255, .6);
@@ -62,6 +62,6 @@ export const MainTitle = styled(Title)`
     color: ${props => props.theme.black.darken(.1)};
 `;
 export const SecondTitle = styled(Title)`
-    font-size: 1.5rem;
-    color: ${props => props.theme.black.darken(.5)};
+    font-size: 1.2rem;
+    color: ${props => props.theme.black.lighten(.1)};
 `;
