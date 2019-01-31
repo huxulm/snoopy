@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Container =  styled.div`
   margin: 2% 5% 2% 5%;
   /* border: 1px dotted lightgray; */
-  height: 8rem;
+  height: auto;
+  min-height: 8rem;
 `;
 
 export const Title = styled.div`
@@ -34,13 +35,14 @@ export const Summary = styled(Title)`
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  margin-top: .2rem;
+  margin-top: 1rem;
   color: #3A3C3D;
   :hover {
     text-decoration: none;
   }
   @media (max-width: 468px) {
     font-size: 1rem;
+    margin-top: .2rem;
   }
 `;
 
@@ -51,8 +53,11 @@ export const Status = styled.div`
   justify-content: flex-end;
   font-style: italic;
   font-size: .6rem;
-  margin: .5rem .8rem .5rem .2rem;
+  margin: 2rem 2rem;
   color: #939497;
+  @media (max-width: 467px) {
+    margin: .5rem .8rem .5rem .2rem;
+  }
   a::before,a::after {
     content: " ";
     white-space: pre;
