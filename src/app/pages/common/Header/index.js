@@ -34,7 +34,7 @@ class Header extends Component {
     const { jwt } = this.props.store;
     return (
       <Container
-        innerRef={e => (this.headerRef = e)}
+        ref={e => (this.headerRef = e)}
         opacity={this.state.opacity}
         justifyContent="space-between"
       >

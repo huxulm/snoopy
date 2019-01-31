@@ -122,7 +122,7 @@ class Formatter extends React.Component {
           }}
         >
           <FormatterArea
-            innerRef={e => {
+            ref={e => {
               this.sqlArea = e;
             }}
             value={this.state.code}

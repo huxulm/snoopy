@@ -193,7 +193,7 @@ class Editor extends React.Component {
                   mode="markdown"
                   code={mdContent}
                   id="1"
-                  innerRef={e => (this.editor = e)}
+                  ref={e => (this.editor = e)}
                   onChange={this.onChange}
                   onSave={this.onSave}
                 />

@@ -41,7 +41,7 @@ class Detail extends React.Component {
       <Container style={{
         height: '100vh',
         paddingBottom: '3rem'
-      }} innerRef={e => (this.conRef = e)}>
+      }} ref={e => (this.conRef = e)}>
         <Editor onChange={this.onChange} mode={2}/>
       </Container>
     );

@@ -106,7 +106,7 @@ class Drawer extends React.Component {
         </CtrlIcon>
         <Bottombar native state={state}>
           {({ y }) => (
-            <BottomContainer innerRef={this.setInputRef} className={this.state.open? '' : 'dw-hide'} style={{ height: `${height}px`,transform: y.interpolate(y => `translate3d(0,${y}%,0)`) }}>
+            <BottomContainer ref={this.setInputRef} className={this.state.open? '' : 'dw-hide'} style={{ height: `${height}px`,transform: y.interpolate(y => `translate3d(0,${y}%,0)`) }}>
               <Content native keys={items.map((_, i) => i)} config={{ tension: 200, friction: 20 }} state={state}>
                 {items.map((item, i) => ({ x, ...props }) => (
                   <animated.div
