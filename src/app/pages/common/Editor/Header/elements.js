@@ -43,6 +43,7 @@ export const BottomContainer = styled.div`
   box-sizing: border-box;
   bottom: 1.8rem;
   padding: .5rem;
+  padding-right: 1rem;
   color: #969696;
 
   .it:nth-child(n) {
@@ -71,6 +72,6 @@ export const BottomContainer = styled.div`
 `;
 
 export const BottomTagsContainer = styled(BottomContainer)`
-  padding-right: 2rem;
+  padding-right: 1rem;
   bottom: 0;
 `;
