@@ -14,7 +14,8 @@ class LifePage extends React.Component {
           记录
         </DividerBar>
         <ContentContainer>
-          <Record/>
+          {/* <Record/> */}
+          // 内容已保护
         </ContentContainer>
       </Container>
     );

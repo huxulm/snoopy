@@ -22,5 +22,8 @@ export const ContentContainer = styled.div`
   width: 100vw;
   height: 100%;
   display: flex;
+  text-align: center;
+  align-items: center;
   justify-content: center;
+  color: ${props => props.theme.green()};
 `;
