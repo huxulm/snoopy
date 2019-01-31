@@ -15,7 +15,7 @@ class LifePage extends React.Component {
         </DividerBar>
         <ContentContainer>
           {/* <Record/> */}
-          // 内容已保护
+          :( 😞 内容已保护
         </ContentContainer>
       </Container>
     );
