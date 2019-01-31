@@ -10,7 +10,7 @@ import Weibo from "app/components/Icons/weibo";
 import qs from "query-string";
 import NewBlog from "./NewBlog";
 
-import "./index.css";
+import "./index.scss";
 
 const List = Loadable(() =>
   import(/* webpackChunkName: 'page-blog-list' */ "./List")
@@ -55,17 +55,18 @@ class Blog extends React.Component {
 
   render() {
     const { location } = this.props;
+    const scrollTop = this.props.store.scrollTop;
     let switchStyle = this.getSwitchStyle(location);
+    let isScrolling = scrollTop > 50;
     return (
       <Container className="bl" innerRef={e => (this.conRef = e)}>
-        {!/blog\/[0-9A-Za-z]{24}$/.test(location.pathname) && (
-          <BlogHeader
-            onClickBack={e => {
-              history.push("/blog");
-            }}
-            onClickBackHome={e => history.push("/")}
-          />
-        )}
+        <BlogHeader
+          onClickBack={e => {
+            history.push("/blog");
+          }}
+          className={`blog-header ${this.state.showHead == true? 'onscroll' : (isScrolling? 'onscroll' : '')}`}
+          onClickBackHome={e => history.push("/")}
+        />
         <ContentContainer>
           <Switch>
             <SwitchContentContainer style={switchStyle}>
@@ -85,7 +86,7 @@ class Blog extends React.Component {
             other...
           </SideOneContainer> */}
         </ContentContainer>
-        <Footer color={"#000"} background={"#FFF"}/>
+        <Footer color={"#000"} background={"#EBEBEB"}/>
       </Container>
     );
   }

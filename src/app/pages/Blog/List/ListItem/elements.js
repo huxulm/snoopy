@@ -51,7 +51,7 @@ export const Status = styled.div`
   justify-content: flex-end;
   font-style: italic;
   font-size: .6rem;
-  margin: .2rem .8rem .5rem .2rem;
+  margin: .5rem .8rem .5rem .2rem;
   color: #939497;
   a::before,a::after {
     content: " ";

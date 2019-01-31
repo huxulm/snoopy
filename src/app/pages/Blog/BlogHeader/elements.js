@@ -4,7 +4,7 @@ import Row from "common/components/flex/Row";
 export const Container = Row.extend`
   width: 100%;
   height: 3.5rem;
-  background: ${props => props.theme.white.lighten(1)};
+  background: ${props => `rgba(244, 244, 244, ${props.opacity || 1})`};
   z-index: 10;
   vertical-align: middle;
   position: sticky;
@@ -25,7 +25,6 @@ export const Title = styled.div`
   padding: 0.125rem;
   font-weight: 800;
   font-size: 1rem;
-  color: black;
   margin-left: .5rem;
   ::before {
     content: ' ';

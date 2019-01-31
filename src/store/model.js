@@ -45,5 +45,6 @@ export default {
       pageNo: types.number
     })
   ),
-  blogDetail: types.maybeNull(Blog)
+  blogDetail: types.maybeNull(Blog),
+  scrollTop: types.maybeNull(types.number),
 };

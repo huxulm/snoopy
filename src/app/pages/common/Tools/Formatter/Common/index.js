@@ -119,7 +119,6 @@ class Formatter extends React.Component {
             label="选择语言"
             style={{ width: "10%", marginBottom: "1rem", marginTop: "2rem" }}
             onChange={e => {
-              console.log(e.target.name);
               this.setState({
                 lang: e.target.value,
               });

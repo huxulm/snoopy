@@ -26,7 +26,10 @@ class BlogList extends React.Component {
   };
 
   render() {
-    const { total = 0, pageNo, docs = [] } = this.props.store.blogList || {};
+    const { total = 0, pageNo = 1, totalPages = 0, docs = [] } = this.props.store.blogList || {};
+    const { queryBlogList } = this.props.signals;
+    let disableNext = pageNo == totalPages;
+    let disablePrev = pageNo == 1;
     return (
       <ListContainer>
         {docs.map(v => (
@@ -44,10 +47,18 @@ class BlogList extends React.Component {
         ))}
         {total > 0 && (
           <BtnGroupContainer>
-            <BtnLoader style={{ marginRight: "1rem" }}>
+            <BtnLoader style={{ marginRight: "1rem", cursor: disablePrev? 'not-allowed' : 'pointer', background: disablePrev? '#DFDEDE' : 'white' }} onClick={e => {
+              if (queryBlogList) {
+                queryBlogList({ page: pageNo > 1? pageNo-1 : 1});
+              }
+            }}>
               PREVIOUS POSTS
             </BtnLoader>
-            <BtnLoader>OLD POSTS</BtnLoader>
+            <BtnLoader style={{cursor: disableNext? 'not-allowed' : 'pointer', background: disableNext? '#DFDEDE' : 'white'}} onClick={
+              e => {
+                queryBlogList({ page: pageNo < totalPages? pageNo+1 : totalPages});
+              }
+            }>OLD POSTS</BtnLoader>
           </BtnGroupContainer>
         )}
       </ListContainer>

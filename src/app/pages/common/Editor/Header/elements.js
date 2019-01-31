@@ -1,22 +1,29 @@
 import styled from "styled-components";
 
 export const DetailHeaderContainer = styled.div`
-  height: 38.2vh;
+  min-height: ${props => props.height? props.height : '44.2vh'};
   width: 100%;
   /* background: #297AFF; */
-  background: ${props => props.bgUrl? `url("${props.bgUrl}")` : "#B7B5B9"};
+  background: ${props => props.bgUrl? `url("${props.bgUrl}")` : "transparent"};
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: none;
   display: flex;
   align-items: center;
   position: relative;
+  max-height: 18rem;
   .title {
     font-size: 2rem;
     height: auto;
-    color: white;
-    padding: 0 1rem 0 1rem;
+    color: ${props => props.theme.black.lighten(.15)};
+    padding: 1rem 0 3rem 5rem;
     font-weight: 600;
+    /* background: rgba(0, 0, 0, .2); */
+    width: 100%;
+
+    @media (max-width: 467px) {
+      padding: 1rem 1rem 3rem 1rem;
+    }
   }
 
   .title::before {
@@ -36,7 +43,7 @@ export const BottomContainer = styled.div`
   box-sizing: border-box;
   bottom: 1.8rem;
   padding: .5rem;
-  color: #565a5f;
+  color: #969696;
 
   .it:nth-child(n) {
     margin-left: 1rem;
@@ -56,6 +63,7 @@ export const BottomContainer = styled.div`
   .it {
     display: flex;
     flex-direction: row;
+    cursor: pointer;
   }
   .it .tx {
     margin-left: .2rem;

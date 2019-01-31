@@ -19,6 +19,7 @@ export default Module({
     currentModal: undefined,
     blogList: null,
     blogDetail: null,
+    scrollTop: 0,
   },
   getters: {
   },
@@ -32,6 +33,7 @@ export default Module({
     modalOpened: sequences.openModal,
     queryBlogList: sequences.queryBlogListByPager,
     queryBlogDetail: sequences.queryBlogDetailById,
+    onScrollChange: sequences.onScrollChange,
   },
   catch: [],
   modules: {

@@ -55,3 +55,8 @@ export const queryBlogDetailById = [
     ]
   }
 ];
+
+export const onScrollChange = [
+  // set(state`scrollTop`, props.scrollTop),
+  set(state`scrollTop`, props`scrollTop`),
+]

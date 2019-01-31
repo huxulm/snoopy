@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ListContainer = styled.div`
   overflow: auto;
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
   .list-item:nth-child(n) {
     margin-top: 4rem;
   }
@@ -49,8 +49,8 @@ export const BtnLoader = styled.div`
   width: auto;
   padding: .3rem;
   align-content: center;
-  line-height: 1rem;
-  height: 1rem;
+  line-height: 2rem;
+  height: 2rem;
   color: #000;
   font-weight: bold;
   text-align: center;

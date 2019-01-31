@@ -58,7 +58,7 @@ export function setModal( { state, props } ) {
 }
 
 export function queryBlogByPager( { state, props, api }) {
-  return api.get(`/blogs/page?page=${props.page || 1}&limit=${props.limit || 5}`).then(res => {
+  return api.get(`/blogs/page?page=${props.page || 1}&limit=${props.limit || 4}`).then(res => {
     state.set('blogList', res.data);
   }).catch(err => {
     console.log(err);

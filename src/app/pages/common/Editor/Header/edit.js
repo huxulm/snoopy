@@ -4,7 +4,7 @@ import React from "react";
 export default function ({ name = "Jackdon", onClick }) {
   return (
     <div onClick={onClick} className="it ed">
-      <FaEdit />
+      <FaEdit color={"#969696"}/>
     </div>
   );
 }

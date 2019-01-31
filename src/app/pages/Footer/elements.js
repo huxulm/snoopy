@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { withScreenSize } from "@vx/responsive";
 
 const Container = withScreenSize(styled.div`
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 6rem;
   line-height: 2rem;

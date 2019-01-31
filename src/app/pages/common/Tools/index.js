@@ -6,10 +6,13 @@ import SqlFormatter from "./Formatter/SqlFormatter";
 import history from "../../../utils/history";
 import { withRouter } from 'react-router-dom';
 import Loadable from "app/utils/Loadable";
+import Title from "app/components/Title";
+import { grey } from "@material-ui/core/colors";
 
 const ToolsCommon = Loadable(() =>
   import(/* webpackChunkName: 'page-tools-common' */ "./Formatter/Common")
 );
+
 
 class FormatterIndex extends React.Component {
   constructor(props) {
@@ -27,6 +30,19 @@ class FormatterIndex extends React.Component {
   render() {
     return (
       <Container>
+        <div style={{ borderBottom: "1px solid #d5d5d5" }}>
+          <Title
+            color="#0fd59d"
+            size="1.5rem"
+            weight="400"
+            style={{ margin: "2rem" }}
+          >
+            常用工具集合:{" "}
+            <span style={{ color: "#5C5C5C" }}>
+              [JSON, SQL, JS(X), TypeScript, Markdown, HTML... ]
+            </span>
+          </Title>
+        </div>
         <Switch>
           <Route
             exact

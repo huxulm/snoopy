@@ -1,0 +1,10 @@
+.blog-header {
+  opacity: 0;
+  color: #2C2C2C;
+  transform: translateY(-3.5rem);
+  &.onscroll {
+    opacity: .9;
+    transform: translateY(0);
+    transition: all ease-in-out 200ms;
+  }
+}

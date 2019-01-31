@@ -94,6 +94,34 @@ class Editor extends React.Component {
     this.props.signals.editor.onAddCreatingTag({ tag });
   }
 
+  componentDidMount() {
+  }
+
+  componentWillUpdate() {
+    if (this.editorRef) {
+      window.removeEventListener('scroll', this.onEditorScroll);
+    }
+  }
+
+  onEditorScroll = (e) => {
+    const { onScrollChange } = this.props.signals;
+    if (onScrollChange) {
+      onScrollChange({ scrollTop: e.target.scrollTop });
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.editorRef) {
+      this.editorRef.addEventListener('scroll', this.onEditorScroll);
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.editorRef) {
+      window.removeEventListener('scroll', this.onEditorScroll);
+    }
+  }
+
   render() {
     const { mode = 1, screenWidth } = this.props;
     const {
@@ -116,7 +144,7 @@ class Editor extends React.Component {
       cover = ""
     } = isPreview ? originSource : mode == 2 ? currentEditing : currentCreating;
     return (
-      <EditorContainer isFull={this.state.isFull}>
+      <EditorContainer isFull={this.state.isFull} innerRef={e => {this.editorRef = e;}}>
         <Fullscreen
           enabled={false}
           onChange={isFull =>
@@ -192,11 +220,6 @@ class Editor extends React.Component {
       isLoading: false,
       currentCreating: {
         ...this.props.store.editor.currentCreating,
-        // ...{
-        //   title: "新标题 1",
-        //   mdContent: TMP_MD,
-        //   author: "Jackdon"
-        // },
       }
     };
   };

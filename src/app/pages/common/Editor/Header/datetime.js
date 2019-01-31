@@ -5,7 +5,7 @@ export default function({ time = "2018-12-13", onClick }) {
   return (
     <div onClick={onClick} className="it">
       {" "}
-      <FaCalendar />
+      <FaCalendar color={"#969696"}/>
       <div className="tx">{time}</div>
     </div>
   );

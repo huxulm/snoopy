@@ -56,24 +56,27 @@ injectGlobal`
 export const Container = styled.div`
   min-height: 100vh;
   width: 100vw;
-  background: ${props => props.theme.white.lighten(.5)};
+  background: ${props => props.theme.white.lighten(.9)};
+  color: ${props => props.theme.black.darken(.8)};
   position: fixed;
-  padding: 10%;
-  @media (max-width: 468px) {
-    padding: 5rem;
-  }
 `;
 
 export const ToolsContainer = styled.div`
   display: grid;
-  grid-template-columns: 150px 150px 150px;
-  grid-template-rows: 150px 150px;
+  justify-content: center;
+  grid-template-columns: 15rem;
+  grid-template-rows: 8rem 8rem;
   grid-gap: 1rem;
+  padding: 2rem;
+  @media (max-width: 468px) {
+    padding: 5rem;
+    grid-template-columns: 15rem;
+  }
 `;
 
 export const ToolsItem = styled.div`
   background-color: #8C8C8C;
-  background-image: linear-gradient(130deg, #6C52D9 0%, #8C8C8C 85%, #3EDFD7 100%);
+  background-image: linear-gradient(130deg, black 0%, #8C8C8C 85%, white 100%);
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   color: #fff;
   border-radius: 4px;
