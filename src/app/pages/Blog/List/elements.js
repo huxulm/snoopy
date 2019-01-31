@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ListContainer = styled.div`
   overflow: auto;
-  /* padding-top: 2rem; */
+  margin-top: 3rem;
   .list-item:nth-child(n) {
     margin-top: 4rem;
   }

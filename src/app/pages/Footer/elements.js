@@ -24,6 +24,7 @@ const CopyRight = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   line-height: .8rem;
   /* word-wrap: break-word; */
+  color: ${props => props.theme.black()};
   white-space: initial;
 `;
 export { Container, CopyRight };
