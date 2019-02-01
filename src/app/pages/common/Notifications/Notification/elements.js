@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import theme from 'common/theme';
 
 export const Container = styled.div`
   position: relative;
@@ -19,7 +18,12 @@ export const Container = styled.div`
     return props.theme.secondary();
   }};
 
-  background-color: ${props => props.theme.background2.darken(0.2)()};
+  background-color: ${props => {
+    if (props.type === 'error') return props.theme.red.clearer(0.5)();
+    if (props.type === 'warning') return props.theme.primary.clearer(0.5);
+    if (props.type === 'success') return props.theme.green.clearer(0.5);
+    return props.theme.secondary.clearer(0.5);
+  }};
 `;
 
 export const Content = styled.div`

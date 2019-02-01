@@ -10,6 +10,14 @@ import { ThemeProvider } from "styled-components";
 import theme from 'common/theme';
 import "./index.css";
 
+const showNotification = (message, type) =>
+  controller.getSignal('notificationAdded')({
+    type,
+    message,
+  });
+
+window.showNotification = showNotification;
+
 ReactDOM.render(
   <Provider {...controller.provide()}>
     <ThemeProvider theme={theme}>

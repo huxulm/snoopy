@@ -12,9 +12,10 @@ const ListItem = ({
   createTime = "2018-08-22",
   onItemClick = noop,
   onAuthorClick = noop,
+  style,
 }) => {
   return (
-    <Container className="list-item" onClick={onItemClick.bind(this, id, tags)}>
+    <Container style={style} className="list-item" onClick={onItemClick.bind(this, id, tags)}>
       <Title>
         {title}
       </Title>

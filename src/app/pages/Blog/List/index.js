@@ -8,6 +8,7 @@ import ListItem from "./ListItem";
 import history from "app/utils/history";
 import { inject, observer } from "mobx-react";
 import moment from "moment";
+import { Transition, Trail, animated } from "react-spring";
 
 class BlogList extends React.Component {
   constructor(props) {
@@ -47,18 +48,33 @@ class BlogList extends React.Component {
         ))}
         {total > 0 && (
           <BtnGroupContainer>
-            <BtnLoader style={{ marginRight: "1rem", cursor: disablePrev? 'not-allowed' : 'pointer', background: disablePrev? '#DFDEDE' : 'white' }} onClick={e => {
-              if (queryBlogList) {
-                queryBlogList({ page: pageNo > 1? pageNo-1 : 1});
-              }
-            }}>
+            <BtnLoader
+              style={{
+                marginRight: "1rem",
+                cursor: disablePrev ? "not-allowed" : "pointer",
+                background: disablePrev ? "#DFDEDE" : "white"
+              }}
+              onClick={e => {
+                if (queryBlogList) {
+                  queryBlogList({ page: pageNo > 1 ? pageNo - 1 : 1 });
+                }
+              }}
+            >
               PREVIOUS POSTS
             </BtnLoader>
-            <BtnLoader style={{cursor: disableNext? 'not-allowed' : 'pointer', background: disableNext? '#DFDEDE' : 'white'}} onClick={
-              e => {
-                queryBlogList({ page: pageNo < totalPages? pageNo+1 : totalPages});
-              }
-            }>OLD POSTS</BtnLoader>
+            <BtnLoader
+              style={{
+                cursor: disableNext ? "not-allowed" : "pointer",
+                background: disableNext ? "#DFDEDE" : "white"
+              }}
+              onClick={e => {
+                queryBlogList({
+                  page: pageNo < totalPages ? pageNo + 1 : totalPages
+                });
+              }}
+            >
+              OLD POSTS
+            </BtnLoader>
           </BtnGroupContainer>
         )}
       </ListContainer>

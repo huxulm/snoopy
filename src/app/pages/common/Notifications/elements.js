@@ -13,6 +13,6 @@ export const NotificationContainer = styled.div`
   position: fixed;
   right: 2rem;
   bottom: 0;
-  z-index: 10;
+  z-index: 100;
 `;
 
