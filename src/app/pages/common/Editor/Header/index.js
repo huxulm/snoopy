@@ -27,7 +27,7 @@ class EditorHeader extends React.Component {
 
   render() {
     const { title, createTime, praiseCount, author, bgUrl, onEditClicked, store, tags = [] } = this.props;
-    const canEdit = true || store.jwt && store.user && store.user.name === 'jackdon';
+    const canEdit = store.jwt && store.user && store.user.name === 'jackdon';
     return (
       <div>
         <DetailHeaderContainer bgUrl={bgUrl}>
