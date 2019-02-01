@@ -115,6 +115,7 @@ class Editor extends React.Component {
     if (this.editorRef) {
       this.editorRef.addEventListener('scroll', this.onEditorScroll);
     }
+    this.props.signals.loadEditorPage();
   }
 
   componentWillUnmount() {

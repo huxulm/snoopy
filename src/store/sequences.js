@@ -41,6 +41,8 @@ export const closeModal = [
 
 export const loadPortalPage = factories.withLoadApp([]);
 
+export const loadEditorPage = factories.withLoadApp([]);
+
 export const queryBlogListByPager = actions.queryBlogByPager;
 
 export const queryBlogDetailById = [

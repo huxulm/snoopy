@@ -52,13 +52,6 @@ class Routes extends Component {
     return true;
   }
 
-  componentDidMount() {
-    window.showNotification(
-      'Snoopy\'s Blog has been successfully loaded!',
-      'success'
-    );
-  }
-
   render() {
     return (
       <Container>

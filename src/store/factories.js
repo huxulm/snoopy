@@ -49,6 +49,7 @@ export function withLoadApp(continueSequence) {
                     ],
                     error: [
                       actions.removeJwtFromStorage,
+                      addNotification('登录信息已过期,请重新登录...', 'warning'),
                     ]
                   }
                 ]),

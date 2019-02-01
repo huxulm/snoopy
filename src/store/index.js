@@ -30,6 +30,7 @@ export default Module({
     signInClicked: sequences.signIn,
     logOutClicked: sequences.logout,
     loadPortalPage: sequences.loadPortalPage,
+    loadEditorPage: sequences.loadEditorPage,
     modalClosed: sequences.closeModal,
     modalOpened: sequences.openModal,
     queryBlogList: sequences.queryBlogListByPager,
