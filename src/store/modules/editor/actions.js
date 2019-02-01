@@ -90,7 +90,7 @@ export function getTags({ api, state, path }) {
 
 
 export function alert( { props } ) {
-  window.alert(props.msg || 'Unknown.');
+  window.showNotification(props.msg || 'Unknown.', 'warning');
 }
 
 export function changeCodeOnCreating({ props, state }) {
