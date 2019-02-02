@@ -6,6 +6,7 @@ import Loadable from "../utils/Loadable";
 import Modals from "./common/Modals";
 import SlideImage from "app/components/SlideImage";
 import Notifications from 'app/pages/common/Notifications';
+import { withNamespaces } from 'react-i18next';
 // import _ToolsPage from /* webpackChunkName: 'page-tools' */ "../pages/common/Tools"
 import "normalize.css";
 

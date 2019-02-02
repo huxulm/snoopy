@@ -17,6 +17,21 @@ export const Container = styled.div`
   }
 `;
 
+export const LangSelectContainer = styled.span`
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: ${props => props.theme.black.lighten(.5)};
+  color: white;
+  height: 1.5rem;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  padding: .1rem;
+  border: ${props => `1px solid #ACACAC`};
+  border-radius: .3rem;
+`;
+
 export const NavList = styled.ul`
   list-style: none;
   width: 100%;

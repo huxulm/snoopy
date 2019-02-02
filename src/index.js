@@ -5,7 +5,8 @@ import App from "./app/pages";
 import controller from "./controller";
 import registerServiceWorker from "./registerServiceWorker";
 import { Router } from 'react-router-dom';
-import history from "app/utils/history"
+import history from "app/utils/history";
+import "app/utils/i18n";
 import { ThemeProvider } from "styled-components";
 import theme from 'common/theme';
 import "./index.css";

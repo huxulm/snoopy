@@ -1,22 +1,23 @@
 import React, { PureComponent } from "react";
-import { Container, NavList, NavItem, MainTitle, SecondTitle } from "./elements";
+import { Container, NavList, NavItem, MainTitle, SecondTitle, LangSelectContainer } from "./elements";
 import Divider from "app/components/Divider";
 import { withRouter, NavLink } from "react-router-dom";
 import { inject, observer } from "mobx-react";
+import { withNamespaces } from "react-i18next";
 
 const ROUTES = [
   {
     path: '/home',
-    name: '首页',
+    name: 'home',
   }, {
     path: '/blog',
-    name: '博客',
+    name: 'blog',
   }, {
     path: '/life',
-    name: '可能是生活',
+    name: 'maybe life',
   }, {
     path: '/about',
-    name: '关于',
+    name: 'about',
   }
 ];
 class Navigation extends PureComponent {
@@ -25,16 +26,18 @@ class Navigation extends PureComponent {
   }
 
   render() {
+    const { t } = this.props;
     return (
       <Container>
-        <MainTitle>许令明的个人网站</MainTitle>
+        {/* <LangSelectContainer><span>中</span>|<span>EN</span></LangSelectContainer> */}
+        <MainTitle>{t('mainTitle')}</MainTitle>
         <SecondTitle>Xu Lingming's Personal Website.</SecondTitle>
         <Divider height={'1px'} margin={'5px 0 5px 0'} color={'#3B3B3B'}/>
         <NavList>
           {ROUTES.map((item, idx) => (
             <NavItem key={idx} onClick={e => {
               this.props.history.push(item.path);
-            }}>{item.name.toUpperCase()}</NavItem>
+            }}>{t(item.name).toUpperCase()}</NavItem>
           ))}
         </NavList>
       </Container>
@@ -42,4 +45,4 @@ class Navigation extends PureComponent {
   }
 }
 
-export default inject('store', 'signals')(observer(Navigation));
+export default inject('store', 'signals')(observer(withNamespaces()(Navigation)));
