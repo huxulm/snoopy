@@ -11,7 +11,7 @@ class BlogHeader extends React.Component {
       <Container opacity={1} style={style} className={className}>
         <ProfileImg
           onClick={onClickBack} onDoubleClick={onClickBackHome}
-          src={"https://avatars3.githubusercontent.com/u/15030806?v=4"}
+          src={"http://snp-assets.oss-cn-shanghai.aliyuncs.com/blog_covers/avatar.jpeg"}
           height={25}
           width={25}
         />
