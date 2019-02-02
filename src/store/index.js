@@ -31,6 +31,7 @@ export default Module({
     logOutClicked: sequences.logout,
     loadPortalPage: sequences.loadPortalPage,
     loadEditorPage: sequences.loadEditorPage,
+    loadHomePage: sequences.loadHomePage,
     modalClosed: sequences.closeModal,
     modalOpened: sequences.openModal,
     queryBlogList: sequences.queryBlogListByPager,

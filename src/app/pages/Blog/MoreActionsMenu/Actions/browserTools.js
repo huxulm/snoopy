@@ -10,7 +10,7 @@ export default () => {
   return (
     <ListItem>
       <Avatar>
-        <Tool color={"primary"} />
+        <Tool color={"default"} />
       </Avatar>
       <ListItemText primary="工具集" style={{ color: 'white' }}></ListItemText>
     </ListItem>

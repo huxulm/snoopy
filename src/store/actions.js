@@ -35,6 +35,7 @@ export function setJwtFromStorage({ jwt, state }) {
 export function removeJwtFromStorage( { jwt, state } ) {
   jwt.reset();
   state.set('jwt', null);
+  console.log('jwt was removed.');
 }
 
 export function removeNotification({ state, props }) {
@@ -50,10 +51,10 @@ export function getUser({ api, path }) {
   return api
     .get(`/users/me`)
     .then(res => {
-      if (res && res.data) {
-        const { _id, name, avatar, email } = res.data;
+      if (res) {
+        const { id, name, avatar, email } = res;
         return path.success({
-          user: { avatarUrl: avatar, id: _id, name, email }
+          user: { avatarUrl: avatar, id, name, email }
         });
       } else {
         return path.error();

@@ -40,6 +40,8 @@ export const closeModal = [
   set(state`currentModal`, null)
 ]
 
+export const loadHomePage = factories.withLoadApp([]);
+
 export const loadPortalPage = factories.withLoadApp([]);
 
 export const loadEditorPage = factories.withLoadApp([]);

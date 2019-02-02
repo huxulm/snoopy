@@ -56,6 +56,7 @@ class Blog extends React.Component {
   render() {
     const { location } = this.props;
     const scrollTop = this.props.store.scrollTop;
+    const user = this.props.store.user;
     let switchStyle = this.getSwitchStyle(location);
     let isScrolling = scrollTop > 50;
     return (
@@ -64,6 +65,7 @@ class Blog extends React.Component {
           onClickBack={e => {
             history.push("/blog");
           }}
+          hasLogged={!!user}
           className={`blog-header ${this.state.showHead == true? 'onscroll' : (isScrolling? 'onscroll' : '')}`}
           onClickBackHome={e => history.push("/")}
         />

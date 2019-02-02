@@ -9,7 +9,7 @@ export default () => {
   return (
     <ListItem>
       <Avatar>
-        <EditTwoTone color={"secondary"} />
+        <EditTwoTone color={"default"} />
       </Avatar>
       <ListItemText primary="新笔记" color="white"></ListItemText>
     </ListItem>

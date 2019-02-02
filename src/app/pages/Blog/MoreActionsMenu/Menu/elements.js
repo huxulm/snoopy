@@ -29,7 +29,7 @@ export const MenuItem = styled(Row)`
   text-align: center;
   border-bottom: 1px solid rgba(112, 146, 161, .6);
   :hover {
-    border-left: 2px solid #39A9FF;
+    border-left: 4px solid ${props => props.theme.gray()};
     background-color: rgba(112, 146, 161, .8);
   }
 `;

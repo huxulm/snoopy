@@ -10,6 +10,10 @@ class HomePage extends Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.signals.loadHomePage();
+  }
+
   render() {
     return (
       <Container>

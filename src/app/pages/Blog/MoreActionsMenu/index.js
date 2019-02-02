@@ -4,6 +4,7 @@ import AddIcon from '@material-ui/icons/Add';
 import CreateBlogAction from './Actions/createBlog';
 import BrowserToolsAction from './Actions/browserTools';
 import SignInAction from './Actions/signIn';
+import SignOutAction from './Actions/signOut';
 import history from "app/utils/history";
 
 import {
@@ -26,6 +27,7 @@ class MoreActionsMenu extends Component {
   componentDidMount() { }
 
   render() {
+    const hasLogged = !!this.props.store.user;
     return (
       <Container>
         <ClickableContainer>
@@ -66,7 +68,11 @@ class MoreActionsMenu extends Component {
                 },
                 {
                   onClick: () => {},
-                  children: <SignInAction />
+                  children: <SignInAction hasLogged={hasLogged} {...this.props}/>
+                },
+                {
+                  onClick: () => { },
+                  children: <SignOutAction hasLogged={hasLogged} {...this.props} />
                 }
               ]
             } />
