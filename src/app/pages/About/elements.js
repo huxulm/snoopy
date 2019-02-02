@@ -4,16 +4,18 @@ import Row from "common/components/flex/Row";
 
 export const Container = styled(Portal)`
   justify-content: start;
+  height: 100%;
 `;
 
 export const AboutProfileContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 80vh;;
+  height: 100%;;
   width: auto;
   background: rgba(224, 224, 224, .8);
   color: #000;
   padding: 5%;
+  padding-top: 5rem;
 `;
 
 export const ProfileImg = styled.img`

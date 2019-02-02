@@ -16,6 +16,7 @@ export const signIn = [
       {
         success: [
           set(state`user`, props`user`),
+          factories.addNotification('登录成功.', 'success'),
         ],
         error: [
           factories.addNotification('Github authentication error!', 'error'),

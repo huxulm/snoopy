@@ -45,7 +45,7 @@ class About extends React.Component {
     const { profile } = this.state; 
     return (
       <Container>
-        <Header />
+        {/* <Header /> */}
         <AboutProfileContainer>
           <BaseInfo>
             <Row>

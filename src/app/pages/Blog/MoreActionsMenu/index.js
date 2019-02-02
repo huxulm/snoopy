@@ -3,6 +3,7 @@ import { observer, inject } from "mobx-react";
 import AddIcon from '@material-ui/icons/Add';
 import CreateBlogAction from './Actions/createBlog';
 import BrowserToolsAction from './Actions/browserTools';
+import SignInAction from './Actions/signIn';
 import history from "app/utils/history";
 
 import {
@@ -56,13 +57,16 @@ class MoreActionsMenu extends Component {
                   },
                   children: <CreateBlogAction />
                 },
-
                 {
                   onClick: () => {
                     history
                       .push('/tools');
                   },
                   children: <BrowserToolsAction />
+                },
+                {
+                  onClick: () => {},
+                  children: <SignInAction />
                 }
               ]
             } />
