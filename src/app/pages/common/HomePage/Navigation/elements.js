@@ -32,7 +32,7 @@ export const LangSelectContainer = styled.span`
   border-radius: .3rem;
 `;
 
-export const NavList = styled.ul`
+export const NavList = styled.div`
   list-style: none;
   width: 100%;
   height: 100%;
@@ -40,6 +40,7 @@ export const NavList = styled.ul`
   margin-block-start: 0;
   margin-block-end: 0;
   padding-inline-start: 0;
+  padding-inline-end: 0;
   @media (max-width: 468px) {
     margin-top: 8rem;
   }
