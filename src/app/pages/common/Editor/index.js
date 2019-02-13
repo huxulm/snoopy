@@ -134,7 +134,7 @@ class Editor extends React.Component {
       currentCreating
     } = mode == 2 ? this.props.store.editor : this.getDefaultNewBlog();
     if (mode == 2 && (isLoading || originSource == null)) {
-      return <Loading loading={isLoading} color={"#528570"} />;
+      return <Loading loading={isLoading} />;
     }
     const {
       mdContent,
