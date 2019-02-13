@@ -75,7 +75,7 @@ class Blog extends React.Component {
               <Route exact path="/blog" render={( { location } ) => {
                 if (location.search) {
                   let query = qs.parse(location.search);
-                  if (query.flag === '_createNew') {
+                  if (query.flag === 'new_blog') {
                     return <NewBlog/>;
                   }
                 }

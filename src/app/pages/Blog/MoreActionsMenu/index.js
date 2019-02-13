@@ -56,7 +56,7 @@ class MoreActionsMenu extends Component {
                 {
                   onClick: () => {
                     history
-                      .push('/blog?_f=new_blog');
+                      .push('/blog?flag=new_blog');
                   },
                   children: <CreateBlogAction />
                 },
