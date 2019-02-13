@@ -7,7 +7,6 @@ import history from "../../../utils/history";
 import { withRouter } from 'react-router-dom';
 import Loadable from "app/utils/Loadable";
 import Title from "app/components/Title";
-import { grey } from "@material-ui/core/colors";
 
 const ToolsCommon = Loadable(() =>
   import(/* webpackChunkName: 'page-tools-common' */ "./Formatter/Common")

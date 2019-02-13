@@ -42,6 +42,10 @@ const ToolsPage = Loadable(() =>
   import(/* webpackChunkName: 'page-tools' */ "../pages/common/Tools")
 );
 
+const BooksPage = Loadable(() =>
+  import(/* webpackChunkName: 'page-books' */ "../pages/common/Books")
+);
+
 class Routes extends Component {
   constructor(props) {
     super(props);
@@ -66,6 +70,7 @@ class Routes extends Component {
           <Route path="/life" component={LifePage} />
           <Route path="/signin/:jwt?" component={SignIn} />
           <Route path="/tools" component={ToolsPage}/>
+          <Route path="/books" component={BooksPage}/>
         </Switch>
         <Modals />
         <SlideImage />

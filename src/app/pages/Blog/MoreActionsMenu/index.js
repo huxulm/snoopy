@@ -3,6 +3,7 @@ import { observer, inject } from "mobx-react";
 import AddIcon from '@material-ui/icons/Add';
 import CreateBlogAction from './Actions/createBlog';
 import BrowserToolsAction from './Actions/browserTools';
+import BrowserBooksAction from './Actions/browserBooks';
 import SignInAction from './Actions/signIn';
 import SignOutAction from './Actions/signOut';
 import history from "app/utils/history";
@@ -65,6 +66,13 @@ class MoreActionsMenu extends Component {
                       .push('/tools');
                   },
                   children: <BrowserToolsAction />
+                },
+                {
+                  onClick: () => {
+                    history
+                      .push('/books');
+                  },
+                  children: <BrowserBooksAction />
                 },
                 {
                   onClick: () => {},

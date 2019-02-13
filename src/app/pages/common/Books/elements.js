@@ -3,40 +3,38 @@ import styled from "styled-components";
 export const Container = styled.div`
   min-height: 100vh;
   width: 100vw;
-  background: ${props => props.theme.white.lighten(.9)};
+  background: ${props => props.theme.white.lighten(.5)};
   color: ${props => props.theme.black.darken(.8)};
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
-export const ToolsContainer = styled.div`
-  display: grid;
+export const BookListContainer = styled.div`
   justify-content: center;
-  grid-template-columns: 15rem;
-  grid-template-rows: 8rem 8rem;
-  grid-gap: 1rem;
-  padding: 2rem;
+  padding: 5rem;
+
+  position: relative;
   @media (max-width: 468px) {
-    padding: 5rem;
-    grid-template-columns: 15rem;
+    padding: 2rem;
   }
 `;
 
-export const ToolsItem = styled.div`
-  background-color: #8C8C8C;
-  background-image: linear-gradient(130deg, black 0%, #8C8C8C 85%, white 100%);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  color: #fff;
-  border-radius: 4px;
-  border: 6px solid #8C8C8C;
+export const BookItem = styled.div`
   text-align: center;
   display: flex;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: .5rem;
   font-size: 1.5rem;
   cursor: pointer;
   :hover {
     opacity: .8;
+    background: rgba(200, 200, 200, .8);
+  }
+  div[class="name"] {
+    margin-left: 2rem;
+    color: ${props => props.theme.black()}
   }
 `;
