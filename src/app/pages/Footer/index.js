@@ -1,11 +1,12 @@
 import React from "react";
 import { Container, CopyRight } from "./elements";
+
 const style = {
-  color: "#2C2C2C",
+  color: "#f1f1f1",
   fontWeight: 500,
-  verticalAlign: "text-top",
   textAlign: "center"
 };
+
 class Footer extends React.Component {
   constructor(props) {
     super(props);
@@ -15,15 +16,15 @@ class Footer extends React.Component {
     return (
       <Container {...this.props}>
         <CopyRight>
-          ©2017~2019{" "}
+          ©2017~2019&nbsp;
           <a href="http://www.xulingming.cn" style={style}>
             Snoopy
           </a>
-          . 皖ICP备
+          &nbsp;.皖ICP备
           <a style={style} href="#">
             17008795
           </a>
-          号<br /> Powered by R&N.
+          号<br /> Powered with React.js.
         </CopyRight>
       </Container>
     );

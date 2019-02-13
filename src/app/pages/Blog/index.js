@@ -88,7 +88,7 @@ class Blog extends React.Component {
             other...
           </SideOneContainer> */}
         </ContentContainer>
-        <Footer color={"#000"} background={"#EBEBEB"}/>
+        <Footer color={"#000"} />
       </Container>
     );
   }

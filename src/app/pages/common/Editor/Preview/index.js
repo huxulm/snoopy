@@ -5,7 +5,7 @@ import Markdown from "react-markdown";
 import InlineCode from "app/components/InlineCode";
 import ImageBlock from "app/components/ImageBlock";
 import moment from "moment";
-import Footer from "../../../Footer";
+import Footer from "app/pages/Footer";
 import { Container } from "./elements";
 
 export default function({ title, author, coverUrl, tags, createTime, mdContent, onEditClicked }) {
@@ -27,7 +27,7 @@ export default function({ title, author, coverUrl, tags, createTime, mdContent, 
         escapeHtml={false}
         renderers={{ code: CodeBlock, inlineCode: InlineCode, image: ImageBlock }}
       />
-      {/* <Footer color={'#5B5B5B'} style={{ position: 'relative' }}/> */}
+      <Footer color={'#5B5B5B'} />
     </Container>
   );
 }

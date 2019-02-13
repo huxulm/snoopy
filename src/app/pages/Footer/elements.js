@@ -8,13 +8,13 @@ const Container = withScreenSize(styled.div`
   line-height: 2rem;
   /* min-height: 2rem; */
   display: flex;
-  background: ${props => props.background? props.background : '#000'};
+  background: ${props => props.background? props.background : `linear-gradient(to bottom, #121212 0%, #323232 100%)`};
   flex-direction: row;
   align-content: center;
   justify-content: center;
   justify-items: center;
   padding-top: 4rem;
-  color: ${props => props.color? props.color : '#FFF'};
+  color: ${props => props.color? props.color : '#000'};
 `);
 
 const CopyRight = styled.div`
