@@ -5,7 +5,6 @@
 import React from "react";
 import { inject, observer } from "mobx-react";
 import { Container } from "./elements";
-import Chip from "@material-ui/core/Chip";
 import Editor from "../../common/Editor";
 import "../Detail/index.scss";
 import "./index.scss";

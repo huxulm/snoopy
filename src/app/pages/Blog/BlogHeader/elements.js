@@ -36,10 +36,11 @@ export const Title = styled.div`
 `;
 
 export const DotIndicator = styled.div`
-  height: 8px;
-  width: 8px;
+  height: 2px;
+  width: 2px;
   border-radius: 50%;
   margin-left: 10px;
+  display: ${props => props.hasLogged? 'inherit' : 'none'};
   box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);
   background: ${props => props.hasLogged? props.theme.green() : props.theme.gray()};
 `;
