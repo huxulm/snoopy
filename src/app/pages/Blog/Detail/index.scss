@@ -1,11 +1,20 @@
 .md-view {
   padding: 5rem;
-  color: rgba(0, 0, 0, .84);
   font-family: Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+
+  a, li, ul, p {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 1.58;
+    letter-spacing: -.03em;
+    color: #4f5759;
+  }
 
   h2 {
     line-height: 1.3em;
     margin: 1.3em 0;
+    font-size: 160%;
   }
 
   p {
@@ -51,15 +60,6 @@
       max-width: 100%;
     }
   }
-
-  a, li, ul, p {
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.4rem;
-    line-height: 1.58;
-    letter-spacing: -.03em;
-  }
-
 
   @media (max-width: 468px) {
     padding: 1rem;
